@@ -8,7 +8,6 @@ public class Pessoa {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
     @Column(name="cd_pessoa")
     private Long id;
 

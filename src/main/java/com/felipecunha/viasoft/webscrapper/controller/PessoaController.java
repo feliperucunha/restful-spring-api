@@ -27,4 +27,5 @@ public class PessoaController {
                 .map((p) -> PessoaRs.converter(p))
                 .collect(Collectors.toList());
     }
+
 }
