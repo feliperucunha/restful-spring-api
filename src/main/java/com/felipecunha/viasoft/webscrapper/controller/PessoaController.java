@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
 public class PessoaController {
 
     private final PessoaRepository pessoaRepository;
+    private Scrapper scrapper;
 
     public PessoaController(PessoaRepository pessoaRepository) {
         this.pessoaRepository = pessoaRepository;
@@ -29,6 +30,12 @@ public class PessoaController {
                 .map((p) -> PessoaRs.converter(p))
                 .collect(Collectors.toList());
     }
+
+    //GET
+    @GetMapping("/table")
+    public Scrapper scrapAll() {
+        return scrapper;
+}
 
     //GET
     @GetMapping("/{id}")
